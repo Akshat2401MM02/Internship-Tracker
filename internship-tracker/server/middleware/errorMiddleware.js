@@ -28,6 +28,16 @@ const errorHandler = (err, req, res, next) => {
       .join(', ');
   }
 
+  // Multer file upload errors
+  if (err.name === 'MulterError') {
+    statusCode = 400;
+    if (err.code === 'LIMIT_FILE_SIZE') {
+      message = 'Resume file is too large. Max size is 5MB.';
+    } else {
+      message = err.message;
+    }
+  }
+
   res.status(statusCode).json({
     message,
     stack: process.env.NODE_ENV === 'production' ? null : err.stack,

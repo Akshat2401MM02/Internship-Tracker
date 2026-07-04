@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Briefcase, LogOut, LayoutDashboard } from 'lucide-react';
+import { Briefcase, LogOut, LayoutDashboard, Sparkles } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
@@ -27,6 +27,13 @@ const Navbar = () => {
             >
               <LayoutDashboard className="h-4 w-4" />
               Dashboard
+            </Link>
+            <Link
+              to="/ai-resume"
+              className="hidden items-center gap-1 text-sm font-medium text-gray-400 hover:text-primary-400 sm:flex"
+            >
+              <Sparkles className="h-4 w-4" />
+              AI Resume
             </Link>
             <span className="hidden text-sm text-gray-400 sm:inline">Hi, {user.name}</span>
             <button onClick={handleLogout} className="btn-secondary">

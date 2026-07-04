@@ -15,7 +15,8 @@ A full-stack MERN application to track internship applications — statuses, dea
 - Sort by deadline, application date, or company name
 - Dashboard stats summary (counts per status)
 - Upcoming deadline highlighting
-- Fully responsive, clean Tailwind UI
+- **AI Resume Tailor** — upload your resume (PDF/text) + a job description, and get back a formatted, ATS-optimized resume with tailoring notes
+- Fully responsive, dark-themed Tailwind UI
 
 ---
 
@@ -75,10 +76,16 @@ PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/internship_tracker
 JWT_SECRET=your_own_long_random_secret_string
 CLIENT_URL=http://localhost:5173
+GEMINI_API_KEY=your_free_gemini_api_key_here
 ```
 
 > If using MongoDB Atlas, replace `MONGO_URI` with your connection string, e.g.
 > `mongodb+srv://<user>:<password>@cluster0.mongodb.net/internship_tracker`
+
+> For the **AI Resume Tailor** feature, you need a free Google Gemini API key. Get one at
+> [aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey) (sign in with any Google account,
+> no credit card required) and paste it in as `GEMINI_API_KEY`.
+> Without this key, the rest of the app works fine — only the AI Resume page will show an error.
 
 Start the backend:
 
@@ -123,6 +130,7 @@ Visit **http://localhost:5173** — register an account and start tracking!
 | PUT    | `/api/internships/:id`         | Update internship             | Yes  |
 | DELETE | `/api/internships/:id`         | Delete internship             | Yes  |
 | GET    | `/api/internships/stats/summary` | Dashboard stats summary     | Yes  |
+| POST   | `/api/resume/tailor`           | Generate a tailored resume from resume + job description (multipart form) | Yes  |
 
 ---
 
