@@ -15,7 +15,7 @@ A full-stack MERN application to track internship applications — statuses, dea
 - Sort by deadline, application date, or company name
 - Dashboard stats summary (counts per status)
 - Upcoming deadline highlighting
-- **AI Resume Tailor** — upload your resume (PDF/text) + a job description, and get back a formatted, ATS-optimized resume with tailoring notes
+- **AI Resume Tailor** — upload your resume (PDF/text) + a job description, then refine it through an ongoing chat conversation with the AI, and download the final version as a formatted PDF
 - Fully responsive, dark-themed Tailwind UI
 
 ---
@@ -130,7 +130,9 @@ Visit **http://localhost:5173** — register an account and start tracking!
 | PUT    | `/api/internships/:id`         | Update internship             | Yes  |
 | DELETE | `/api/internships/:id`         | Delete internship             | Yes  |
 | GET    | `/api/internships/stats/summary` | Dashboard stats summary     | Yes  |
-| POST   | `/api/resume/tailor`           | Generate a tailored resume from resume + job description (multipart form) | Yes  |
+| POST   | `/api/resume/tailor`           | Start a resume-tailoring chat session from resume + job description (multipart form) | Yes  |
+| POST   | `/api/resume/chat`             | Send a follow-up message to refine the resume | Yes  |
+| POST   | `/api/resume/pdf`              | Generate a downloadable PDF from the current tailored resume | Yes  |
 
 ---
 
