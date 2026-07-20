@@ -161,6 +161,20 @@ Both `server/.env` and `client/.env` are git-ignored — only the `.env.example`
 
 ---
 
+🔗 **Live Demo:** [internship-tracker-dnfj.onrender.com](https://internship-tracker-dnfj.onrender.com)
+
+**Registration Page**
+<img width="1918" height="858" alt="image" src="https://github.com/user-attachments/assets/dfbc761d-a309-40a1-963d-ec8054e249fd" />
+**Login Page**
+<img width="1917" height="865" alt="image" src="https://github.com/user-attachments/assets/bb649f77-3964-43f1-a242-772bc1e99da8" />
+**Dashboard**
+<img width="1918" height="867" alt="image" src="https://github.com/user-attachments/assets/5b110515-c8e0-4d4f-97ed-1ff32a46b8e3" />
+**AI Resume Tailor**
+<img width="1917" height="867" alt="image" src="https://github.com/user-attachments/assets/67c564e2-1c89-4a18-ad93-56d3b83002c7" />
+
+
+
+
 ## License
 
 MIT — free to use for your own portfolio/resume project.
